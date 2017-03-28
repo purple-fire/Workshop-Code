@@ -54,7 +54,7 @@ void holonomicDrive()
 	motor[BackRight] =  C1LY + C1LX + C1RX;
 }
 
-//H-Drive using...
+//H-Drive using 4 Inputs
 void hDrive(){
 	//Send Left Axis to Left Motors
 	motor[FrontLeft] = C1LY;

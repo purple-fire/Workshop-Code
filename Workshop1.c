@@ -44,16 +44,6 @@ void tankDrive(){
 	motor[BackRight] = C1RY;
 }
 
-//Holonomic Drive using 3 Inputs
-void holonomicDrive()
-{
-	// Y component, X component, Rotation
-	motor[FrontLeft] = -C1LY - C1LX + C1RX;
-	motor[FrontRight] =  C1LY - C1LX + C1RX;
-	motor[BackLeft] = -C1LY + C1LX + C1RX;
-	motor[BackRight] =  C1LY + C1LX + C1RX;
-}
-
 //H-Drive using 4 Inputs
 void hDrive(){
 	//Send Left Axis to Left Motors
@@ -82,9 +72,7 @@ task usercontrol()
 		switch(driveSelect) {
 		case 1: tankDrive();
 			break;
-		case 2: holonomicDrive();
-			break;
-		case 3: hDrive();
+		case 2: hDrive();
 			break;
 		default: tankDrive();
 			break;

@@ -15,8 +15,8 @@ task main()
 	{
 		// Y component, X component, Rotation
 		motor[Front] = -C1LX - C1RX; // Front
-		motor[Left] = -C1LY - C1RX; // Left
-		motor[Right] =  C1LY - C1RX; // Right
+		motor[Left] = -C1LY + C1RX; // Left
+		motor[Right] =  C1LY + C1RX; // Right
 		motor[Back] =  C1LX - C1RX; // Back
 		// Motor values can only be updated every 20ms
 		wait1Msec(20);
